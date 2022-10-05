@@ -1,116 +1,14 @@
 @extends('layouts.default')
 @section('content')
-    @include('includes.banner-posts')
+    <x-banner-posts :posts="$bannerPost"></x-banner-posts>
 
     <section class="all_post section_padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="single_post media post_3">
-                        <div class="single_post_img">
-                            <img src="img/post/post_11.png" alt="">
-                            <a href="category.html" class="category_btn">Tours & travel</a>
-                        </div>
-                        <div class="post_text_1 media-body align-self-center">
-                            <p><span> By Michal</span> / March 30 , 2019</p>
-                            <a href="single-blog.html">
-                                <h3>Called face there light this
-                                    said wherein replenish sadin
-                                    made green grass</h3>
-                            </a>
-                            <div class="post_icon">
-                                <ul>
-                                    <li><i class="ti-comment"></i>2 Comment</li>
-                                    <li><i class="ti-heart"></i>0 Like</li>
-                                    <li><i class="ti-export"></i>Share</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_post media post_3">
-                        <div class="single_post_img">
-                            <img src="img/post/post_12.png" alt="">
-                            <a href="category.html" class="category_btn">branding</a>
-                        </div>
-                        <div class="post_text_1 media-body align-self-center">
-                            <p><span> By Michal</span> / March 30 , 2019</p>
-                            <a href="single-blog.html">
-                                <h3>Called face there light this
-                                    said wherein replenish sadin
-                                    made green grass</h3>
-                            </a>
-                            <div class="post_icon">
-                                <ul>
-                                    <li><i class="ti-comment"></i>2 Comment</li>
-                                    <li><i class="ti-heart"></i>0 Like</li>
-                                    <li><i class="ti-export"></i>Share</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_post media post_3">
-                        <div class="single_post_img">
-                            <img src="img/post/post_13.png" alt="">
-                            <a href="category.html" class="category_btn">digital art</a>
-                        </div>
-                        <div class="post_text_1 media-body align-self-center">
-                            <p><span> By Michal</span> / March 30 , 2019</p>
-                            <a href="single-blog.html">
-                                <h3>Called face there light this
-                                    said wherein replenish sadin
-                                    made green grass</h3>
-                            </a>
-                            <div class="post_icon">
-                                <ul>
-                                    <li><i class="ti-comment"></i>2 Comment</li>
-                                    <li><i class="ti-heart"></i>0 Like</li>
-                                    <li><i class="ti-export"></i>Share</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_post media post_3">
-                        <div class="single_post_img">
-                            <img src="img/post/post_14.png" alt="">
-                            <a href="category.html" class="category_btn">abstract design</a>
-                        </div>
-                        <div class="post_text_1 media-body align-self-center">
-                            <p><span> By Michal</span> / March 30 , 2019</p>
-                            <a href="single-blog.html">
-                                <h3>Called face there light this
-                                    said wherein replenish sadin
-                                    made green grass</h3>
-                            </a>
-                            <div class="post_icon">
-                                <ul>
-                                    <li><i class="ti-comment"></i>2 Comment</li>
-                                    <li><i class="ti-heart"></i>0 Like</li>
-                                    <li><i class="ti-export"></i>Share</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_post media post_3">
-                        <div class="single_post_img">
-                            <img src="img/post/post_15.png" alt="">
-                            <a href="category.html" class="category_btn">illustration</a>
-                        </div>
-                        <div class="post_text_1 media-body align-self-center">
-                            <p><span> By Michal</span> / March 30 , 2019</p>
-                            <a href="single-blog.html">
-                                <h3>Called face there light this
-                                    said wherein replenish sadin
-                                    made green grass</h3>
-                            </a>
-                            <div class="post_icon">
-                                <ul>
-                                    <li><i class="ti-comment"></i>2 Comment</li>
-                                    <li><i class="ti-heart"></i>0 Like</li>
-                                    <li><i class="ti-export"></i>Share</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @foreach ($posts->skip(2) as $post)
+                        <x-post-card :post="$post"></x-post-card>
+                    @endforeach
                     <div class="load_btn text-center">
                         <a href="#" class="btn_1">LOADING MORE <i class="ti-angle-right"></i></a>
                     </div>
@@ -183,7 +81,7 @@
                                 <li><a href="single-blog.html">Branding (15)</a></li>
                             </ul>
                         </div>
-                        <div class="sidebar_tittle">
+                        {{-- <div class="sidebar_tittle">
                             <h3>Popular Tags</h3>
                         </div>
                         <div class="single_catagory_item tags">
@@ -194,7 +92,7 @@
                                 <li><a href="single-blog.html">News</a></li>
                                 <li><a href="single-blog.html">html</a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
