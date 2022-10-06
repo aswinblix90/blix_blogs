@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,4 @@ use App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class,'index']);
 
-Route::get('/single-blog',function(){
-    return view('single-blog');
-});
+Route::get('/single-blog/{post:slug}',[PostController::class, 'showSinglePost']);

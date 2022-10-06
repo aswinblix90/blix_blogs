@@ -9,13 +9,13 @@
     <link rel="icon" href="img/favicon.png">
 
     <link rel="stylesheet"
-        href="css/bootstrap.min.css%2banimate.css%2bowl.carousel.min.css%2bthemify-icons.css%2bliner_icon.css%2bsearch.css.pagespeed.cc.OQbQ_Q3mBi.css" />
+        href="/css/bootstrap.min.css%2banimate.css%2bowl.carousel.min.css%2bthemify-icons.css%2bliner_icon.css%2bsearch.css.pagespeed.cc.OQbQ_Q3mBi.css" />
 
 
 
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script
         nonce="8092bdd4-1e30-43bd-9674-0bbddd697967">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}; a.zarazData.executed = []; a.zaraz = { deferred: [], listeners: [] }; a.zaraz.q = []; a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.zaraz.init = () => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; n && (a.zarazData.t = e.getElementsByTagName("title")[0].text); a.zarazData.x = Math.random(); a.zarazData.w = a.screen.width; a.zarazData.h = a.screen.height; a.zarazData.j = a.innerHeight; a.zarazData.e = a.innerWidth; a.zarazData.l = a.location.href; a.zarazData.r = e.referrer; a.zarazData.k = a.screen.colorDepth; a.zarazData.n = e.characterSet; a.zarazData.o = (new Date).getTimezoneOffset(); a.zarazData.q = []; for (; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e || {}).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin"; z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))); t.parentNode.insertBefore(z, t) };["complete", "interactive"].includes(e.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, 0, "script"); })(window, document);</script>
 </head>
@@ -27,7 +27,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index-2.html"> <img src="img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="index-2.html"> <img src="/img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -150,9 +150,9 @@
 
 
 
-    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="/js/jquery-1.12.1.min.js"></script>
 
-    <script src="js/popper.min.js%2bbootstrap.min.js%2bcustom.js.pagespeed.jc.gYmHlo_7vK.js"></script>
+    <script src="/js/popper.min.js%2bbootstrap.min.js%2bcustom.js.pagespeed.jc.gYmHlo_7vK.js"></script>
     <script>eval(mod_pagespeed_PWLQVsaTcP);</script>
 
     <script>eval(mod_pagespeed_tVPbFyQalw);</script>
@@ -174,6 +174,5 @@
         crossorigin="anonymous"></script>
 </body>
 
-<!-- Mirrored from preview.colorlib.com/theme/daren/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Oct 2022 10:59:06 GMT -->
 
 </html>
