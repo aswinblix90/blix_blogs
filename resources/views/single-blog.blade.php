@@ -107,36 +107,41 @@
 
                     </div>
                     <div class="comment-form">
-                        <h4>Leave a Reply</h4>
-                        <form class="form-contact comment_form" action="#" id="commentForm">
+                        <h4>Leave a Comment</h4>
+                        <form class="form-contact comment_form" method="POST" action="/single-blog/{{$post->slug}}" id="commentForm">
+                            @csrf
+                            <input type="hidden" name="postId" value="{{$post->id}}">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" name="comment" id="comment" cols="30"
-                                            rows="9" placeholder="Write Comment"></textarea>
+                                        <textarea class="form-control w-100" name="body" id="body" cols="30"
+                                            rows="9" placeholder="Write Comment">{{old('body')}}</textarea>
+                                        @error('body')
+                                            <small id="body" class="form-text text-danger">{{$message}}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="name" id="name" type="text"
+                                        <input class="form-control" value="{{old('name')}}" name="name" id="name" type="text"
                                             placeholder="Name">
+                                        @error('name')
+                                            <small id="name" class="form-text text-danger">{{$message}}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="email" id="email" type="email"
+                                        <input class="form-control" value="{{old('name')}}" name="email" id="email" type="email"
                                             placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input class="form-control" name="website" id="website" type="text"
-                                            placeholder="Website">
+                                            @error('email')
+                                            <small id="email" class="form-text text-danger">{{$message}}</small>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
                             <div class="load_btn">
-                                <a href="#" class="btn_1">SUBMIT <i class="ti-angle-right"></i></a>
+                                <input type="submit" class="btn_1" value="Submit">
                             </div>
                         </form>
                     </div>

@@ -21,13 +21,15 @@
 </head>
 
 <body>
-
+    @if (session()->has('status'))
+        <p class="alert">{{session('status')}}</p>
+    @endif
     <header class="main_menu">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index-2.html"> <img src="/img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="/"> <img src="/img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +39,7 @@
                             id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index-2.html">Home</a>
+                                    <a class="nav-link" href="/">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="archive.html">Archive</a>

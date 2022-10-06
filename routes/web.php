@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PostController;
@@ -19,3 +20,6 @@ use App\Models\Post;
 Route::get('/', [IndexController::class,'index']);
 
 Route::get('/single-blog/{post:slug}',[PostController::class, 'showSinglePost']);
+
+Route::post('/single-blog/{post:slug}', [CommentController::class, 'store']);
+

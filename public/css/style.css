@@ -4662,5 +4662,9 @@ h6 {
 .footer-area .copyright_part_text a {
   color: #ef1313;
 }
+.text-danger{
+  color: red;
+  font-size: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */
