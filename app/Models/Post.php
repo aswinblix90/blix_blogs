@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $with = ['category','author'];
+    protected $with = ['category','author', 'comments'];
 
     public function category()
     {
@@ -18,5 +18,9 @@ class Post extends Model
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }

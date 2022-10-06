@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Comment;
 use Illuminate\Database\Seeder;
 use App\Models\Post;
 
@@ -22,5 +24,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         Post::factory(5)->create();
+        Comment::factory(5)->create();
     }
 }
