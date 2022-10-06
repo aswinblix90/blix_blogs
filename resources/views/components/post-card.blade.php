@@ -11,7 +11,7 @@
         </a>
         <div class="post_icon">
             <ul>
-                <li><i class="ti-comment"></i>2 Comment</li>
+                <li><i class="ti-comment"></i>{{count($post->comments)}} Comment</li>
                 <li><i class="ti-heart"></i>{{$post->views}}</li>
             </ul>
         </div>
