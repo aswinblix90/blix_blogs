@@ -9,7 +9,7 @@
                         <a href="category.html">
                             <h5> {{$posts[0]->category->name}}</h5>
                         </a>
-                        <a href="single-blog.html">
+                        <a href="/single-blog/{{$posts[0]->slug}}">
                             <h2>{{$posts[0]->title}}</h2>
                         </a>
                         <p><span> By {{$posts[0]->author->name}}</span> / {{$posts[0]->created_at->format('F') . " " . $posts[0]->created_at->format('d') . ", " . $posts[0]->created_at->format('Y') }}</p>
@@ -20,7 +20,7 @@
                         <a href="category.html">
                             <h5> {{$posts[1]->category->name}}</h5>
                         </a>
-                        <a href="single-blog.html">
+                        <a href="/single-blog/{{$posts[1]->slug}}">
                             <h2>{{$posts[1]->title}}</h2>
                         </a>
                         <p><span> By {{$posts[1]->author->name}}</span> / March 30 , 2019</p>

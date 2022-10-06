@@ -11,7 +11,7 @@ class PostController extends Controller
 
     public function showSinglePost(Post $post)
     {
-        $post->incrementView();
+        $post->increment('views');
         return view('single-blog',[
             'post' => $post
         ]);
