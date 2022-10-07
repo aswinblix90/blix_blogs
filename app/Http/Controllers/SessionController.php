@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
 class SessionController extends Controller
@@ -15,5 +16,10 @@ class SessionController extends Controller
         if(auth()->attempt($attributes)){
             return redirect('/')->with('status', 'Welcome ' . auth()->user()->name );
         }
+    }
+    public function destroy()
+    {
+        auth()->logout();
+        return redirect('/')->with('status', 'User logged out Successfully');
     }
 }

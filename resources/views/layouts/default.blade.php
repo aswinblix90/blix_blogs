@@ -49,13 +49,21 @@
                                     <a class="nav-link" href="/user/login">Login</a>
                                 </li>
                                 @endguest
+                                @auth
+                                    <form id="logout_form" action="/user/logout" method="POST">
+                                        @csrf
+                                        <li class="nav-item">
+                                            <a class="nav-link" onclick="logout()" href="#">Logout</a>
+                                        </li>
+                                    </form>
+                                @endauth
                                 <li class="nav-item">
                                     <a class="nav-link" href="category.html"> Category</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact</a>
                                 </li>
-                                <li class="nav-item dropdown">
+                                {{-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Pages
@@ -64,14 +72,14 @@
                                         <a class="dropdown-item" href="single-blog.html">Single blog</a>
                                         <a class="dropdown-item" href="elements.html">elements</a>
                                     </div>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                         <div class="header_social_icon d-none d-sm-block">
                             <ul>
                                 <li>
                                     <div id="wrap">
-                                        <form action="#">
+                                        <form action="#" method="POST">
                                             <input id="search" name="search" type="text" placeholder="Search here"><span
                                                 class="ti-search"></span>
                                         </form>
@@ -179,6 +187,11 @@
         integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
         data-cf-beacon='{"rayId":"75452a3a8f48f2ae","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.8.1","si":100}'
         crossorigin="anonymous"></script>
+    <script>
+        function logout(){
+            document.getElementById('logout_form').submit();
+        }
+    </script>
 </body>
 
 

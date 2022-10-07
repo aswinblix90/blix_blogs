@@ -35,3 +35,5 @@ Route::get('/user/login', function () {
 });
 
 Route::post('/user/login', [SessionController::class, 'create']);
+
+Route::post('/user/logout', [SessionController::class, 'destroy']);
