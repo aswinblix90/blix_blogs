@@ -4,7 +4,8 @@ use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PostController;
-use App\Models\Post;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,14 @@ Route::get('/single-blog/{post:slug}',[PostController::class, 'showSinglePost'])
 
 Route::post('/single-blog/{post:slug}', [CommentController::class, 'store']);
 
+Route::get('/user/create', function(){
+    return view('user.create');
+});
+
+Route::post('/user/create', [UserController::class, 'store']);
+
+Route::get('/user/login', function () {
+    return view('session.create');
+});
+
+Route::post('/user/login', [SessionController::class, 'create']);

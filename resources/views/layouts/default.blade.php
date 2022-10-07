@@ -41,9 +41,14 @@
                                 <li class="nav-item active">
                                     <a class="nav-link" href="/">Home</a>
                                 </li>
+                                @guest
                                 <li class="nav-item">
-                                    <a class="nav-link" href="archive.html">Archive</a>
+                                    <a class="nav-link" href="/user/create">Register</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/user/login">Login</a>
+                                </li>
+                                @endguest
                                 <li class="nav-item">
                                     <a class="nav-link" href="category.html"> Category</a>
                                 </li>
