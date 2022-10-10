@@ -56,6 +56,9 @@
                                             <a class="nav-link" onclick="logout()" href="#">Logout</a>
                                         </li>
                                     </form>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/add-post"> Add post</a>
+                                    </li>
                                 @endauth
                                 <li class="nav-item">
                                     <a class="nav-link" href="category.html"> Category</a>

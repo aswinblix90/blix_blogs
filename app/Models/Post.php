@@ -9,6 +9,7 @@ class Post extends Model
 {
     use HasFactory;
     protected $with = ['category','author', 'comments'];
+    protected $guarded = [];
 
     public function category()
     {
