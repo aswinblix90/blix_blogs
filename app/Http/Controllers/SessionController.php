@@ -17,9 +17,11 @@ class SessionController extends Controller
             return redirect('/')->with('status', 'Welcome ' . auth()->user()->name );
         }
     }
-    public function destroy()
+    public function destroy(Request $request)
     {
         auth()->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         return redirect('/')->with('status', 'User logged out Successfully');
     }
 }
