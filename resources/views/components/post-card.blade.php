@@ -1,7 +1,7 @@
 @props(['post'])
 <div class="single_post media post_3">
     <div class="single_post_img">
-        <img src="{{$post->thumbnail}}" alt="">
+        <img src="/storage/{{$post->thumbnail}}" alt="">
         <a href="category.html" class="category_btn">{{$post->category->name}}</a>
     </div>
     <div class="post_text_1 media-body align-self-center">

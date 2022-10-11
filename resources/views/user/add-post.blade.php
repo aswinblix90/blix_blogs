@@ -8,10 +8,14 @@
                     @csrf
                     <div class="form-group">
                         <label for="category">Select Category</label>
-                        <select id="category" name="category" required="" class="form-control">
-                            <option selected>Choose Category</option>
+                        <select id="category" name="category" required class="form-control">
+                            <option value="" selected>Choose Category</option>
                             @foreach ($categories as $category)
-                                <option value="{{$category->id}}">{{ucwords($category->name)}}</option>
+                                @if (old('category') == $category->id )
+                                    <option value="{{$category->id}}" selected>{{ucwords($category->name)}}</option>
+                                @else
+                                    <option value="{{$category->id}}">{{ucwords($category->name)}}</option>
+                                @endif
                             @endforeach
                         </select>
                         @error('category')
