@@ -28,7 +28,8 @@ class PostController extends Controller
         $attributes = $request->validate([
             'title' => ['required'],
             'excerpt' => ['required'],
-            'body' => ['required']
+            'body' => ['required'],
+            'thumbnail' => ['required']
         ]);
         $attributes['user_id'] = auth()->user()->id;
         $attributes['category_id'] = $request->category;

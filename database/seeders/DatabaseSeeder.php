@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Category;
 use App\Models\Comment;
 use Illuminate\Database\Seeder;
 use App\Models\Post;
@@ -23,7 +24,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Post::factory(5)->create();
-        Comment::factory(5)->create();
+        // Post::factory(5)->create();
+        // Comment::factory(5)->create();
+        $categories = ['health','nature','work'];
+
+        foreach($categories as $category){
+            Category::create([
+                'name' => $category
+            ]);
+        }
     }
 }
