@@ -6,6 +6,8 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UserController;
+use App\Models\Category;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +39,27 @@ Route::get('/user/login', function () {
 Route::post('/user/login', [SessionController::class, 'create']);
 
 Route::post('/user/logout', [SessionController::class, 'destroy']);
+
+Route::get('/home', function(){
+    return view('user.home');
+});
+
+Route::get('/add-post', function () {
+    return view('user.add-post',[
+        'categories' => Category::all()
+    ]);
+})->middleware('auth');
+
+Route::post('/add-post', [PostController::class, 'create'])->middleware('auth');
+
+Route::get('/all-posts', [UserController::class, 'myPosts']);
+
+Route::get('/edit-post/{post:slug}', function (Post $post) {
+    return view('user.edit-post', [
+        // 'categories' => Category::all()
+        'post' => $post,
+        'categories' => Category::all()
+    ]);
+})->middleware('auth');
+
+Route::post('/edit-post/{post:slug}', [PostController::class, 'updatePost'])->middleware('auth');

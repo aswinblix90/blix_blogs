@@ -14,7 +14,7 @@ class SessionController extends Controller
             'password' => ['required', 'min:6']
         ]);
         if(auth()->attempt($attributes)){
-            return redirect('/')->with('status', 'Welcome ' . auth()->user()->name );
+            return redirect('/home')->with('status', 'Welcome ' . auth()->user()->name );
         }
     }
     public function destroy(Request $request)
